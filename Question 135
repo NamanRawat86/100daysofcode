@@ -1,0 +1,9 @@
+/* Q135 (Enum)
+Assign explicit values starting from 10 and print them.
+*/
+#include <stdio.h>
+enum Numbers {TEN=10, ELEVEN, TWELVE};
+int main() {
+    printf("%d %d %d", TEN, ELEVEN, TWELVE);
+    return 0;
+}
