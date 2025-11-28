@@ -1,0 +1,16 @@
+/* Q126 (File Handling)
+Check if file exists; print error or content.
+*/
+#include <stdio.h>
+int main() {
+    FILE *fp;
+    char fname[50];
+    scanf("%s", fname);
+    fp = fopen(fname, "r");
+    if(fp == NULL) printf("Error: File does not exist!");
+    else {
+        printf("File opened successfully.");
+        fclose(fp);
+    }
+    return 0;
+}
