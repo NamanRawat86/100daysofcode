@@ -1,0 +1,17 @@
+/* Q150 (Enum)
+Use pointer to struct to modify and display data using -> operator.
+*/
+#include <stdio.h>
+#include <string.h>
+struct Student {
+    char name[50];
+    int marks;
+};
+int main() {
+    struct Student s;
+    struct Student *ptr = &s;
+    strcpy(ptr->name, "John");
+    ptr->marks = 95;
+    printf("Name: %s, Marks: %d", ptr->name, ptr->marks);
+    return 0;
+}
