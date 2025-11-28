@@ -1,0 +1,15 @@
+/* Q149 (Enum)
+Use malloc() to allocate structure memory dynamically and print details.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+struct Node { int data; };
+int main() {
+    struct Node *ptr;
+    ptr = (struct Node*)malloc(sizeof(struct Node));
+    if(ptr == NULL) return 1;
+    ptr->data = 100;
+    printf("Data: %d", ptr->data);
+    free(ptr);
+    return 0;
+}
