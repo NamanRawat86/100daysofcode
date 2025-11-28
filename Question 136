@@ -1,0 +1,14 @@
+/* Q136 (Enum)
+Use enum to represent menu choices (ADD, SUBTRACT, MULTIPLY) and perform operations using switch.
+*/
+#include <stdio.h>
+enum Menu {ADD=1, SUB, MUL};
+int main() {
+    int ch=1, a=10, b=5;
+    switch(ch) {
+        case ADD: printf("%d", a+b); break;
+        case SUB: printf("%d", a-b); break;
+        case MUL: printf("%d", a*b); break;
+    }
+    return 0;
+}
