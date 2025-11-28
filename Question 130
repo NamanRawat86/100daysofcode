@@ -1,0 +1,16 @@
+/* Q130 (File Handling)
+Store student records in file and read them back.
+*/
+#include <stdio.h>
+int main() {
+    FILE *fp = fopen("students.txt", "w+");
+    char name[50]; int roll, m;
+    if(fp == NULL) return 1;
+    fprintf(fp, "John 101 95\nAlice 102 89");
+    rewind(fp);
+    while(fscanf(fp, "%s %d %d", name, &roll, &m) != EOF) {
+        printf("%s %d %d\n", name, roll, m);
+    }
+    fclose(fp);
+    return 0;
+}
