@@ -1,0 +1,13 @@
+/* Q125 (File Handling)
+Append text to an existing file.
+*/
+#include <stdio.h>
+int main() {
+    FILE *fp = fopen("info.txt", "a");
+    char text[100];
+    if(fp == NULL) return 1;
+    scanf("%s", text);
+    fprintf(fp, "%s", text);
+    fclose(fp);
+    return 0;
+}
