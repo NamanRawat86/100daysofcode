@@ -1,0 +1,9 @@
+/* Q133 (Enum)
+Create an enum for months and print how many days each month has.
+*/
+#include <stdio.h>
+enum Months {JAN=31, FEB=28, MAR=31};
+int main() {
+    printf("Jan has %d days", JAN);
+    return 0;
+}
