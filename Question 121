@@ -1,0 +1,14 @@
+/* Q121 (File Handling)
+Create text file, write name and age, confirm save.
+*/
+#include <stdio.h>
+int main() {
+    FILE *fp = fopen("info.txt", "w");
+    char name[50]; int age;
+    if(fp == NULL) return 1;
+    scanf("%s %d", name, &age);
+    fprintf(fp, "Name: %s, Age: %d", name, age);
+    printf("Data saved successfully.");
+    fclose(fp);
+    return 0;
+}
