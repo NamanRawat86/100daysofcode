@@ -1,0 +1,18 @@
+/* Q123 (File Handling)
+Count chars, words, and lines in a file.
+*/
+#include <stdio.h>
+int main() {
+    FILE *fp = fopen("info.txt", "r");
+    char ch;
+    int c=0, w=0, l=0;
+    if(fp == NULL) return 1;
+    while((ch = fgetc(fp)) != EOF) {
+        c++;
+        if(ch == '\n') l++;
+        if(ch == ' ' || ch == '\n') w++;
+    }
+    printf("Chars: %d, Words: %d, Lines: %d", c, w, l);
+    fclose(fp);
+    return 0;
+}
