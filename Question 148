@@ -1,0 +1,11 @@
+/* Q148 (Enum)
+Take two structs as input and check if they are identical.
+*/
+#include <stdio.h>
+struct Box { int w, h; };
+int main() {
+    struct Box b1 = {10, 20}, b2 = {10, 20};
+    if(b1.w == b2.w && b1.h == b2.h) printf("Identical");
+    else printf("Different");
+    return 0;
+}
