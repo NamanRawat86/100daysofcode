@@ -1,0 +1,22 @@
+/* Q109 (Logic Enhancers)
+Maximum sum of subarrays of size k.
+*/
+#include <stdio.h>
+int main() {
+    int n, k, i, j, sum, max=-99999;
+    scanf("%d", &n);
+    int arr[n];
+    for(i=0; i<n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    scanf("%d", &k);
+    for(i=0; i<=n-k; i++) {
+        sum = 0;
+        for(j=i; j<i+k; j++) {
+            sum += arr[j];
+        }
+        if(sum > max) max = sum;
+    }
+    printf("%d", max);
+    return 0;
+}
