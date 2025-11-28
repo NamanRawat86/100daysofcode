@@ -1,0 +1,15 @@
+/* Q124 (File Handling)
+Copy content from source file to destination file.
+*/
+#include <stdio.h>
+int main() {
+    FILE *fs, *fd;
+    char ch, sFile[20], dFile[20];
+    scanf("%s %s", sFile, dFile);
+    fs = fopen(sFile, "r");
+    fd = fopen(dFile, "w");
+    if(fs == NULL || fd == NULL) return 1;
+    while((ch = fgetc(fs)) != EOF) fputc(ch, fd);
+    fclose(fs); fclose(fd);
+    return 0;
+}
