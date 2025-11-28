@@ -1,0 +1,9 @@
+/* Q139 (Enum)
+Show that enums store integers by printing assigned values.
+*/
+#include <stdio.h>
+enum Demo {A=5, B=10};
+int main() {
+    printf("%d %d", A, B);
+    return 0;
+}
