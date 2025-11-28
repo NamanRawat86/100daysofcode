@@ -1,0 +1,15 @@
+/* Q118 (Logic Enhancers)
+Find the missing number in range 0 to n.
+*/
+#include <stdio.h>
+int main() {
+    int n, i, sum=0, input;
+    scanf("%d", &n);
+    int total = n * (n + 1) / 2;
+    for(i=0; i<n; i++) {
+        scanf("%d", &input);
+        sum += input;
+    }
+    printf("%d", total - sum);
+    return 0;
+}
