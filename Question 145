@@ -1,0 +1,14 @@
+/* Q145 (Enum)
+Return a structure containing top student's details from a function.
+*/
+#include <stdio.h>
+struct Box { int l, b; };
+struct Box createBox() {
+    struct Box b = {10, 5};
+    return b;
+}
+int main() {
+    struct Box b = createBox();
+    printf("%d %d", b.l, b.b);
+    return 0;
+}
