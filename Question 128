@@ -1,0 +1,21 @@
+/* Q128 (File Handling)
+Count vowels and consonants in a file.
+*/
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    FILE *fp = fopen("input.txt", "r");
+    char ch;
+    int v=0, c=0;
+    if(fp == NULL) return 1;
+    while((ch = fgetc(fp)) != EOF) {
+        if(isalpha(ch)) {
+            ch = tolower(ch);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u') v++;
+            else c++;
+        }
+    }
+    printf("Vowels: %d, Consonants: %d", v, c);
+    fclose(fp);
+    return 0;
+}
